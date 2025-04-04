@@ -1,7 +1,7 @@
 from War_Game_Cards.player import Player
 
 
-class AIPlayer(Player):
+class  BotPlayer(Player):
     def __init__(self, name, deck):
         super().__init__(name, deck)
 
