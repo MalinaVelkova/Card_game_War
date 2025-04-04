@@ -2,7 +2,7 @@ import time
 
 import keyboard
 
-from War_Game_Cards.ai_player import AIPlayer
+from War_Game_Cards.bot_player import BotPlayer
 from War_Game_Cards.deck import Deck
 from War_Game_Cards.game import Game
 from War_Game_Cards.player import Player
@@ -18,17 +18,17 @@ def main():
 
     while True:
         choice = input(
-            "Do you want to play against an AI or another player? (Enter 'AI' or 'player'): ").strip().lower()
-        if choice == 'ai':
-            player2 = AIPlayer("AI Player", Deck(second_half))
+            "Do you want to play against an Bot or another player? (Enter 'Bot' or 'player'): ").strip().lower()
+        if choice == 'bot':
+            player2 = BotPlayer("Bot Player", Deck(second_half))
             break
         elif choice == 'player':
             player2 = Player(input('Enter a name for player 2: '), Deck(second_half))
             break
         else:
-            print("Invalid choice. Please enter 'AI' or 'player'.")
+            print("Invalid choice. Please enter 'Bot' or 'player'.")
 
-    if isinstance(player2, AIPlayer):
+    if isinstance(player2, BotPlayer):
         print(f"\nPress 'Enter' for Player {player1.get_name()} to draw a card")
         print(f"AI Player ({player2.get_name()}) will auto-draw a card")
     else:
@@ -44,7 +44,7 @@ def main():
         if keyboard.is_pressed("q"):
             print("Quitting game...")
             break
-        elif keyboard.is_pressed("enter") and game.turn == 1 and isinstance(player2, AIPlayer):
+        elif keyboard.is_pressed("enter") and game.turn == 1 and isinstance(player2, BotPlayer):
             result = game.compare_cards()
             print(result)
             if result.startswith("Game over!"):
@@ -62,7 +62,7 @@ def main():
             if result.startswith("Game over!"):
                 break
             time.sleep(0.5)
-        elif isinstance(player2, AIPlayer) and game.turn == 2:
+        elif isinstance(player2, BotPlayer) and game.turn == 2:
             result = game.compare_cards()
             print(result)
             if result.startswith("Game over!"):
