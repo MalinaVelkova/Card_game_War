@@ -1,4 +1,4 @@
-from War_Game_Cards.player import Player
+from player import Player
 
 
 class  BotPlayer(Player):
