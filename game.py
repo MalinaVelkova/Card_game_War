@@ -1,5 +1,5 @@
-from War_Game_Cards.game_logic import GameLogic
-from War_Game_Cards.war import War
+from game_logic import GameLogic
+from war import War
 
 
 class Game(GameLogic):
