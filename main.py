@@ -2,10 +2,10 @@ import time
 
 import keyboard
 
-from War_Game_Cards.bot_player import BotPlayer
-from War_Game_Cards.deck import Deck
-from War_Game_Cards.game import Game
-from War_Game_Cards.player import Player
+from bot_player import BotPlayer
+from deck import Deck
+from game import Game
+from player import Player
 
 
 def main():
