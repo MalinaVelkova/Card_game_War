@@ -30,7 +30,8 @@ War_Game_Cards/
 
 ## Example Gameplay (Console Output)
 With Bot
-![bot](https://github.com/user-attachments/assets/1eda1511-1008-41e5-af12-85baa92efca7)
+![bot](https://github.com/user-attachments/assets/83f5ef1f-3ba9-4898-8533-a5402233ae1a)
+
 With Player
 ![player](https://github.com/user-attachments/assets/1eb9995b-bb76-4c06-be40-ea45c3157aae)
 
