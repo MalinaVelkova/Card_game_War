@@ -1,6 +1,6 @@
 import random
 
-from War_Game_Cards.card import Card
+from card import Card
 
 
 class Deck:
